@@ -9,8 +9,5 @@ function totalFine( fare ) {
   return total;
 }
 
-console.log(totalFine(200)); 
 
-console.log(totalFine(50));    
-console.log(totalFine("65")); 
 
