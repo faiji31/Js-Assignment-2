@@ -11,7 +11,7 @@ function totalFine( fare ) {
 
 function  onlyCharacter( str ) {
   if (typeof str!=="string"){
-    return "invalid";
+    return "Invalid";
   }
   return str.replace(/\s+/g,"").toUpperCase()
 }
@@ -19,7 +19,7 @@ function  onlyCharacter( str ) {
 
 function  bestTeam( player1, player2 ) {
           if (typeof player1!=="object"|| typeof player2!=="object"|| typeof player1===null|| typeof player2===null){
-            return "invalid";
+            return "Invalid";
           }
           const total1= (player1.foul ||0) + (player1.cardY||0) + (player1.cardR||0);
            const total2= (player2.foul ||0) + (player2.cardY||0) + (player2.cardR||0);
@@ -31,4 +31,18 @@ function  bestTeam( player1, player2 ) {
            }else{
             return "Tie";
            }
+}
+
+function  isSame(arr1 , arr2 ) {
+         if(!Array.isArray(arr1)||!Array.isArray(arr2)){
+            return "Invalid";
+         }
+         if (arr1.length!==arr2.length){
+            return false;
+         }
+         for (let i=0;i<arr1.length;i++){
+            if(arr1[i]!==arr2[i]){
+                return false;
+            }
+         }return true;
 }
